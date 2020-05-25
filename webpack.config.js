@@ -17,6 +17,14 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
       module: {
         rules: [
           {
+            test: /\.js$/,
+            use: [
+              {
+                loader: "babel-loader"
+              }
+            ]
+          },
+          {
             test: /\.jpe?g$/,
             use: [
               {

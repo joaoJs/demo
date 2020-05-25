@@ -1,12 +1,25 @@
-const makeImage = (url, height, width) => {
-    const image = document.createElement("img");
+const makeImage = (url, webpUrl === "" ) => {
+    // const image = `<img src=${url}>`
 
-    if (height && width) {
-      image.height = height;
-      image.width = width;
+    // const image = `<img src=./img/${url} loading="lazy">`
+
+    let image;
+
+    if (webpUrl.length > 0) {
+      image = 
+        `<picture>
+          <source srcset="${webpUrl}" type="image/webp">
+          <source srcset="${url}" type="image/png">
+          <img src="${url}" alt="Alt Text!" loading="lazy">
+        </picture>
+        `
+    } else {
+      image = `<img src=${url}>`
     }
-    image.src = url;
+    
     return image;
   };
   
   export default makeImage;
+
+  //<img src="img/${url}.png" alt="Alt Text!" loading="lazy">
