@@ -1,3 +1,5 @@
+import '../node_modules/bootstrap-4-grid/css/grid.css'
+// import '../node_modules/bootstrap-4-grid/css/grid.css'
 import './styles/main.css'
 import './styles/nav.css'
 import nav from './nav'
@@ -26,6 +28,8 @@ import footer from './footer'
 import bigImgUrl from './img/bg_salaovivo.png'
 
 import makeImage from './scripts/makeImage'
+import makeButton from './scripts/makeButton'
+import makeRows from './scripts/makeRows'
 
 console.log('indexIsWorking')
 
@@ -44,5 +48,13 @@ anotherCarousel.appendChild(andyPng)
 const bigFooterImg = makeImage(bigImgUrl)
 footer.appendChild(bigFooterImg)
 
+const btn = makeButton('showRows')
+midSection.appendChild(btn)
+
+const rowsWrapper = makeRows()
+
+btn.addEventListener('click', () => {
+    midSection.appendChild(rowsWrapper)
+})
 
 
