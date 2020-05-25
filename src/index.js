@@ -1,6 +1,7 @@
 //comece com as linhas abaixo comentadas
 import '../node_modules/bootstrap-4-grid/css/grid.css'
-import _ from 'lodash'
+// import _ from 'lodash'
+const getLodash = () => import('lodash')
 // import '../node_modules/bootstrap-4-grid/css/grid.min.css'
 // import '../node_modules/popper.js/dist/popper.js'
 //comece com a linha abaixo comentada
@@ -79,16 +80,18 @@ const rowsWrapper = makeRows()
 
 const numbers = [1,2,3,4,5,6]
 
-btn.addEventListener('click', () => {
-    midSection.innerHTML = ""
-    midSection.appendChild(btn)
-    midSection.appendChild(rowsWrapper)
-    const shuffled = _.shuffle(numbers)
-    shuffled.forEach(n => {
-        const newBtn = document.createElement('button')
-        newBtn.innerHTML = n
-        midSection.appendChild(newBtn)
-    })
-})
+// btn.addEventListener('click', () => {
+//     getLodash().then(l => {
+//         midSection.innerHTML = ""
+//         midSection.appendChild(btn)
+//         midSection.appendChild(rowsWrapper)
+//         const shuffled = l.shuffle(numbers)
+//         shuffled.forEach(n => {
+//         const newBtn = document.createElement('button')
+//         newBtn.innerHTML = n
+//         midSection.appendChild(newBtn)
+//     })
+//     })
+// })
 
 
