@@ -1,11 +1,11 @@
-const makeImage = (url, webpUrl === "" ) => {
+const makeImage = (url, webpUrl ) => {
     // const image = `<img src=${url}>`
 
     // const image = `<img src=./img/${url} loading="lazy">`
 
     let image;
 
-    if (webpUrl.length > 0) {
+    if (webpUrl) {
       image = 
         `<picture>
           <source srcset="${webpUrl}" type="image/webp">
