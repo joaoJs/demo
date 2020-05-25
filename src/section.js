@@ -3,3 +3,5 @@ midSection.className = 'midSection'
 midSection.innerHTML = 'midSection'
 
 document.body.appendChild(midSection)
+
+export default midSection

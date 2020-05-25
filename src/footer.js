@@ -3,3 +3,5 @@ footer.innerHTML = "footer"
 footer.className = 'footer'
 
 document.body.appendChild(footer)
+
+export default footer

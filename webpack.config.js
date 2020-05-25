@@ -32,6 +32,7 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
             exclude: /node_modules/,
             loader: 'file-loader',
             options: {
+              outputPath: 'img',
               name: '[name].[ext]'
             }
           },
