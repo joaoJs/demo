@@ -26,7 +26,15 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
                 }
               }
             ]
-          }
+          },
+          {
+            test: /\.(png|gif|webp|webm|mp4)$/i,
+            exclude: /node_modules/,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          },
         ]
       },
       output: {
