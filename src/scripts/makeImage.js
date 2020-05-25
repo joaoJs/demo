@@ -1,7 +1,4 @@
 const makeImage = (url, webpUrl ) => {
-    // const image = `<img src=${url}>`
-
-    // const image = `<img src=./img/${url} loading="lazy">`
 
     let image;
 
